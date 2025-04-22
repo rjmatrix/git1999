@@ -1,12 +1,10 @@
 name: Trigger
 
 on: push
-  schedule: '0 0 * * * *'
 
 jobs: 
     echo:
     runs-on: ubuntu-latest
     steps:
         - name: show the trigger
-          run: |
-          echo " Event name: ${{github.event_name}}"
+          run: echo " Event name: ${{github.event_name}} event"
