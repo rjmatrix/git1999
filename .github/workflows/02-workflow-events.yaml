@@ -3,7 +3,7 @@ name: Trigger
 on: 
    #push:
     pull_request:
-    schedule:
+   #schedule:
      # - cron: '* */5 * * *'
     workflow_dispatch: # to Tigger it Manually if we add these step
 
