@@ -1,7 +1,6 @@
 name: Workflow_Runners
 
-on: 
-push:
+on: push
 
 Workflow_Runners:
 
