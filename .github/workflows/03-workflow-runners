@@ -2,8 +2,6 @@ name: Workflow_Runners
 
 on: push
 
-Workflow_Runners:
-
 jobs:
   ubuntu-echo:
    runs-on : ubuntu-latest
