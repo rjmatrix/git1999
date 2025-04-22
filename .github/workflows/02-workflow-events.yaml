@@ -1,11 +1,11 @@
 name: Trigger
 
 on: 
-    push:
+   #push:
     pull_request:
     schedule:
-        - cron: '* */5 * * *'
-    workflow_dispatch: # to Tigger it Manually
+     # - cron: '* */5 * * *'
+    workflow_dispatch: # to Tigger it Manually if we add these step
 
 jobs: 
     echotrigger:
