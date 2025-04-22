@@ -13,6 +13,7 @@ jobs:
         steps:
             - name: passed step 
               run: |
+<<<<<<< HEAD
                 echo " I will pass"
               # exit1
             - name: Goodbye
@@ -20,3 +21,9 @@ jobs:
 
 
               #these is a teste
+=======
+                echo " I will fail"
+               # exit 1
+            - name: Goodbye
+              run:  " echo good bye "
+>>>>>>> db5cb09ba7bf82d6a5e5f46acf52fb7f682eb6a7
