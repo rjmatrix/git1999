@@ -18,7 +18,7 @@ jobs:
       shell: bash
       run: echo "This job is running on a windows runner"
   mac-echo:
-   runs-on : Mac-latest
+   runs-on : ubuntu-latest                        #Mac-latest
    steps:
 
     - name: show-os
