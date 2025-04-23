@@ -18,7 +18,7 @@ jobs:
       shell: bash
       run: echo "This job is running on a windows runner"
   
-  
+  # removed the mac run still getting queued in new trigger
   
   
   
