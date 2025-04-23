@@ -1,6 +1,7 @@
 name: exec-flow
 
 on:
+    push:
     workflow_dispatch:
         inputs:
             pass-unit-tests:
