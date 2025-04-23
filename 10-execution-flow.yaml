@@ -1,0 +1,46 @@
+name: exec-flow
+
+on:
+    workflow_dispatch:
+        inputs:
+            pass-unit-tests:
+                type: boolean
+                description: true
+jobs:
+    lint-build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Lint and build
+              run: echo "lint and build project"
+    unit-test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Running unit testa
+              run: echo " Running test's...."
+            - name: Failing Test
+              if: ${{ !input.pass-unit-tests }} 
+              run: exit 1 
+    deploy-nonprod:
+        runs-on: ubuntu-latest
+        needs:
+            - lint-build
+            - unit-test
+        steps:
+            - name: Deploy to non prod
+              run: echo "Deploy to non prod "
+    e2e-tests:
+        runs-on: ubuntu-latest
+        needs: 
+            - deploy-nonprod 
+        steps:
+            - name: Running e2e test
+              run: echo " Running E2E Test"  
+    deploy-prod:
+        runs-on: ubuntu-latest
+        needs:
+            - deploy-nonprod
+            - e2e-tests
+        steps:
+          - name: deploy to prod
+            run: echo "deploy to prod"
+    

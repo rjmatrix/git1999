@@ -1,0 +1,16 @@
+name: Trigger
+
+on: 
+   #push:
+    pull_request:
+   #schedule:
+     # - cron: '* */5 * * *'
+    workflow_dispatch: # to Tigger it Manually if we add these step
+
+jobs: 
+    echotrigger:
+        runs-on: ubuntu-latest
+        steps:
+        - name: show the trigger
+          run: echo "Event name ${{ github.event_name }} event."
+## test
