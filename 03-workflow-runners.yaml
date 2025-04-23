@@ -17,17 +17,24 @@ jobs:
     - name: show-os
       shell: bash
       run: echo "This job is running on a windows runner"
-  #mac-echo:
-   #runs-on : ubuntu-latest                        #Mac-latest
-   #steps:
-
-    #- name: show-os
-      #run: echo " THis job is running on a MacOs runner"
-
-      
-      #these is a test one
-
-#demo part
-    
-#demo 2
-# newa
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
